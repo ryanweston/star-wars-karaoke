@@ -1,0 +1,64 @@
+
+/* Styles for the buttons */
+button {
+text-align: center;
+text-decoration: none;
+display: inline-block;
+background: #000000;
+padding:15px 30px 15px 30px;
+font-size: 30;
+font-weight:700;
+color: #F7E226;
+text-transform: uppercase;
+border: 3px solid #F7E226; /* Yellow Border Box */
+margin-left:8px;
+}
+
+button:hover {
+  color: #ad9c1a; /* Changes text colour on hover */
+  border: 3px solid #ad9c1a; /* Changes colour of border on hover */
+}
+
+
+
+/* Styles for input text and paragraph tags */
+p, input {
+  font-size: 30;
+  font-weight:300;
+  color: #F7E226;
+  background: #000000;
+}
+
+/*Styles and positioning for input, without effecting p styles */
+input {
+  margin-left:8px; /* Spacing between buttons */
+  border: 3px solid #F7E226;
+  padding:15px 30px 15px 30px;
+}
+
+/* Title styles, fixed position */
+.title {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  font-weight:700;
+  color: #F7E226;
+  position:absolute;
+  top:20px;
+  right:450px;
+}
+
+/* Container styles, black background to fit with sketch, padding for GUI */
+.contain {
+  background: #000000;
+  margin:0;
+  padding:30px 30px 30px 30px;
+  width: 1220px;
+}
+
+#sith {
+  position:inline;
+  margin-left:0;
+  float:right;
+  margin-right:24px; /* Accounts for margins used for button spacing */
+}
