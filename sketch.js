@@ -63,7 +63,7 @@ var song;
 
 function setup() {
   //Uses WEBGL for adjusting perspective of text movemement
-  createCanvas(1280, 720,WEBGL);
+  createCanvas(windowWidth, windowHeight,WEBGL);
 
   star = new Star();
   //Creates an array for 1600 stars

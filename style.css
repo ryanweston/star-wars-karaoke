@@ -1,4 +1,6 @@
-
+body { 
+  position:absolute;
+}
 /* Styles for the buttons */
 button {
 text-align: center;
@@ -43,17 +45,17 @@ input {
   font-size: 30px;
   font-weight:700;
   color: #F7E226;
-  position:absolute;
+  /* position:absolute;
   top:20px;
-  right:450px;
+  right:450px; */
 }
 
 /* Container styles, black background to fit with sketch, padding for GUI */
 .contain {
   background: #000000;
   margin:0;
-  padding:30px 30px 30px 30px;
-  width: 1220px;
+  
+  width: 100%;
 }
 
 #sith {
