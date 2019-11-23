@@ -1,11 +1,12 @@
 body { 
   position:absolute;
+  overflow: hidden;
 }
 /* Styles for the buttons */
 button {
+vertical-align: top;
 text-align: center;
 text-decoration: none;
-display: inline-block;
 background: #000000;
 padding:15px 30px 15px 30px;
 font-size: 30;
@@ -13,7 +14,7 @@ font-weight:700;
 color: #F7E226;
 text-transform: uppercase;
 border: 3px solid #F7E226; /* Yellow Border Box */
-margin-left:8px;
+
 }
 
 button:hover {
@@ -23,19 +24,27 @@ button:hover {
 
 
 
+
+
+/*Styles and positioning for input, without effecting p styles */
+input {
+  margin:0;
+  display:inline-block;
+  vertical-align: top;
+  border: 3px solid #F7E226;
+  padding:15px 30px 15px 30px;
+  vertical-align: top;
+}
+
 /* Styles for input text and paragraph tags */
 p, input {
+  /* line-height: 0; */
   font-size: 30;
   font-weight:300;
   color: #F7E226;
   background: #000000;
-}
-
-/*Styles and positioning for input, without effecting p styles */
-input {
-  margin-left:8px; /* Spacing between buttons */
-  border: 3px solid #F7E226;
-  padding:15px 30px 15px 30px;
+  display:inline-block;
+  vertical-align: top;
 }
 
 /* Title styles, fixed position */
@@ -44,23 +53,46 @@ input {
   font-style: normal;
   font-size: 30px;
   font-weight:700;
-  color: #F7E226;
+  
+  
   /* position:absolute;
   top:20px;
   right:450px; */
+  display:inline-block;
+  line-height: -2em;
+  font-family: work-sans, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size:6em;
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #F7E226;;
+  text-align:center;
 }
 
 /* Container styles, black background to fit with sketch, padding for GUI */
-.contain {
-  background: #000000;
-  margin:0;
-  
-  width: 100%;
+.container {
+  position: relative;
+  padding:50px;
+  height:100%;
+  border:3px solid #F7E226;
 }
 
-#sith {
-  position:inline;
-  margin-left:0;
-  float:right;
-  margin-right:24px; /* Accounts for margins used for button spacing */
+.wrapper {
+  position:absolute;
+  width:100vw;
+  height:100vw;
 }
+
+#sith { 
+  display:inline-block;
+  vertical-align: top;
+}
+
+.item {
+  /* padding-left:10px; 
+  padding-right:10px; 
+  padding-top:20px; */
+}
+
+
