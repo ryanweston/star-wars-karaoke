@@ -145,9 +145,9 @@ function togglePlaying() {
   if(!song.isPlaying()) {
     song.play();
     song.setVolume(0.8);
-    document.getElementById("sith").innerHTML="PAUSE THEME TUNE";
+    document.getElementById("sith").innerHTML='<i class="fas fa-pause"></i> PAUSE THEME TUNE';
   } else {
     song.pause();
-    document.getElementById("sith").innerHTML="PLAY THEME TUNE";
+    document.getElementById("sith").innerHTML='<i class="fas fa-play"></i> PLAY THEME TUNE';
   }
 }
