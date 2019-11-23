@@ -14,7 +14,8 @@ font-weight:700;
 color: #F7E226;
 text-transform: uppercase;
 border: 3px solid #F7E226; /* Yellow Border Box */
-
+border-radius:6px;
+margin-left:3px;
 }
 
 button:hover {
@@ -22,29 +23,41 @@ button:hover {
   border: 3px solid #ad9c1a; /* Changes colour of border on hover */
 }
 
+::-webkit-input-placeholder { opacity: 1; -webkit-transition: opacity .5s; transition: opacity .5s; }  /* Chrome <=56, Safari < 10 */
+:-moz-placeholder { opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s; } /* FF 4-18 */
+::-moz-placeholder { opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s; } /* FF 19-51 */
+:-ms-input-placeholder { opacity: 1; -ms-transition: opacity .5s; transition: opacity .5s; } /* IE 10+ */
+::placeholder { opacity: 1; transition: opacity .5s; } /* Modern Browsers */
 
-
-
-
+*:focus::-webkit-input-placeholder { opacity: 0; } /* Chrome <=56, Safari < 10 */
+*:focus:-moz-placeholder { opacity: 0; } /* FF 4-18 */
+*:focus::-moz-placeholder { opacity: 0; } /* FF 19-50 */
+*:focus:-ms-input-placeholder { opacity: 0; } /* IE 10+ */
+*:focus::placeholder { opacity: 0; } /* Modern Browsers */
 /*Styles and positioning for input, without effecting p styles */
 input {
   margin:0;
   display:inline-block;
-  vertical-align: top;
   border: 3px solid #F7E226;
+  border-radius:4px;
   padding:15px 30px 15px 30px;
-  vertical-align: top;
+  margin-left:3px;
+  background: #000000;
+  color: #F7E226;
 }
 
+input:focus {
+  outline-style:none;
+  border: 3px solid #7d7315;
+box-shadow:none;
+/* border-color:transparent; */
+}
 /* Styles for input text and paragraph tags */
-p, input {
+::placeholder {
   /* line-height: 0; */
   font-size: 30;
   font-weight:300;
   color: #F7E226;
-  background: #000000;
-  display:inline-block;
-  vertical-align: top;
 }
 
 /* Title styles, fixed position */
@@ -53,18 +66,16 @@ p, input {
   font-style: normal;
   font-size: 30px;
   font-weight:700;
-  
+  margin:0;
   
   /* position:absolute;
   top:20px;
   right:450px; */
-  display:inline-block;
-  line-height: -2em;
   font-family: work-sans, sans-serif;
   font-weight: 900;
   font-style: normal;
-  font-size:6em;
-
+  font-size:5em;
+  line-height: -1em;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #F7E226;;
   text-align:center;
@@ -72,16 +83,26 @@ p, input {
 
 /* Container styles, black background to fit with sketch, padding for GUI */
 .container {
-  position: relative;
-  padding:50px;
-  height:100%;
+  
+  width:80%;
   border:3px solid #F7E226;
+  border-radius:4px;
+  margin:auto;
+  text-align:center;
+}
+
+nav {
+  display: inline-block;
+  /* width:100%; */
+  margin:auto;
+  padding-bottom:25px;
 }
 
 .wrapper {
+  padding-top:30px;
   position:absolute;
-  width:100vw;
-  height:100vw;
+  width:100%;
+  height:100%;
 }
 
 #sith { 
