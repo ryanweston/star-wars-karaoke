@@ -50,6 +50,7 @@ input:focus {
   outline-style:none;
   border: 3px solid #7d7315;
 box-shadow:none;
+background: black;
 /* border-color:transparent; */
 }
 /* Styles for input text and paragraph tags */
@@ -110,10 +111,6 @@ nav {
   vertical-align: top;
 }
 
-.item {
-  /* padding-left:10px; 
-  padding-right:10px; 
-  padding-top:20px; */
-}
 
+/* RESPONSIVE STYLES  */
 

@@ -8,7 +8,7 @@ let y = 0;
 var stars = [];
 var speedStars;
 var song;
-
+var canvas;
 
 //Preloads font for WEBGL render. Has to be opentype.
  function preload() {
@@ -63,7 +63,8 @@ var song;
 
 function setup() {
   //Uses WEBGL for adjusting perspective of text movemement
-  createCanvas(windowWidth, windowHeight,WEBGL);
+  canvas = createCanvas(windowWidth, windowHeight,WEBGL);
+  // canvas.position(windowWidth, windowHeight, WEBGL);
 
   star = new Star();
   //Creates an array for 1600 stars
@@ -111,43 +112,47 @@ function gotData(data) {
 }
 
 function draw() {
-  var vol = amp.getLevel();
+          var vol = amp.getLevel();
 
-  //Maps speed of stars to amplitude levels of the theme song.
-  speedStars = map(vol, 0.6, 0.2, 3, 60);
-  background(0);
-  //stars drawn by interating through stars array from setup();
-  for (var i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
+          //Maps speed of stars to amplitude levels of the theme song.
+          speedStars = map(vol, 0.6, 0.2, 3, 60);
+          background(0);
+          //stars drawn by interating through stars array from setup();
+          for (var i = 0; i < stars.length; i++) {
+            stars[i].update();
+            stars[i].show();
+        }
+
+
+
+          if (lyrics){
+            //Text styles for lyrics.
+              fill(250,203,64);
+              textSize(20);
+              textAlign(CENTER);
+            //Changes perspective of the text in WEBGL canvas.
+              rotateX(PI/4);
+            //Incremements counter, allowing lyrics to move up page.
+              y+=4;
+            //Generates lyrics for the song, positions at bottom of the screen
+            //uses y incrementor to move up page by dividing.
+              text(lyrics.result.track.text,0, height / 2 - y / 2 );
+            //console.log(y);
+            }
 }
 
-
-
-  if (lyrics){
-    //Text styles for lyrics.
-      fill(250,203,64);
-      textSize(20);
-      textAlign(CENTER);
-    //Changes perspective of the text in WEBGL canvas.
-      rotateX(PI/4);
-    //Incremements counter, allowing lyrics to move up page.
-      y+=4;
-    //Generates lyrics for the song, positions at bottom of the screen
-    //uses y incrementor to move up page by dividing.
-      text(lyrics.result.track.text,0, height / 2 - y / 2 );
-    //console.log(y);
-    }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 //Toggles pause and play and changes content of button to reflect in GUI.
 function togglePlaying() {
-  if(!song.isPlaying()) {
-    song.play();
-    song.setVolume(0.8);
-    document.getElementById("sith").innerHTML='<i class="fas fa-pause"> </i>  PAUSE THEME TUNE';
-  } else {
-    song.pause();
-    document.getElementById("sith").innerHTML='<i class="fas fa-play"> </i>  PLAY THEME TUNE';
-  }
+    if(!song.isPlaying()) {
+      song.play();
+      song.setVolume(0.8);
+      document.getElementById("sith").innerHTML='<i class="fas fa-pause"> </i>  PAUSE THEME TUNE';
+    } else {
+      song.pause();
+      document.getElementById("sith").innerHTML='<i class="fas fa-play"> </i>  PLAY THEME TUNE';
+    }
 }
