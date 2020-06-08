@@ -1,7 +1,14 @@
-With this project, I initially aimed to create a song lyrics generator, where
-you could search up your favourite songs and a pos-tagger would find and replace
-words based on their word-type with Star Wars references using the SWAPI (Star Wars API). However, I wasn't able to make any natural language processors work
-with my code and after much time, I instead decided to create a Star Wars Themed Karaoke reader that fetches lyrics of a song you search and displays them in a scrolling format using WEBGL in the style of the film's intro, with a background that is responsive to the amplitude of the music.
+# Star Wars Karaoke 
 
-Github Link: https://ryanweston.github.io/
-             https://github.com/ryanweston/DAT405
+Take JSON response from a lyrics API and displays it in a star wars introduction style format.
+
+Project site: <http://projects.ryanweston.me/star-wars-karaoke>
+
+**Disclaimer:** Project was developed for a short, first year university module. It is by no means clean, and the WebGL is really buggy and inefficient. I'll be looking to clean the project up in the near future.
+
+### Roadmap
+----
+- 🎵 Look for a way to include the Spotify API to play the searched song alongside the lyrics.
+- 🌟 Improve the WebGL stars and map their speed to the song, acting as an audio visualiser.
+- 🎨 Fix CSS bugs.
+- 📱 Improve mobile responsiveness.
