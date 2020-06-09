@@ -8,7 +8,9 @@ Project site: <http://projects.ryanweston.me/star-wars-karaoke>
 
 ### Roadmap
 ----
+- 📁 **Clean up file structure.**
 - 🎵 Look for a way to include the Spotify API to play the searched song alongside the lyrics.
 - 🌟 Improve the WebGL stars and map their speed to the song, acting as an audio visualiser.
 - 🎨 Fix CSS bugs.
 - 📱 Improve mobile responsiveness.
+
